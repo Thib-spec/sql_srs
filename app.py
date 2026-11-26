@@ -2,7 +2,19 @@ import streamlit as st
 import pandas as pd
 import duckdb as duckdb
 
-st.write("hello world")
+st.write("""
+# SQL CRS
+Space Repetition System SQL Practice
+""")
+
+option = st.selectbox(
+    "What would you like to review",
+    ["Joins","Group by","Windows Function"],
+    index=None,
+    placeholder="Select a theme"
+)
+
+st.write('You selected:', option)
 
 data = {"a":[1,2,3], "b":[4,5,6]}
 df = pd.DataFrame(data)
